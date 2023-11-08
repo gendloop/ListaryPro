@@ -1,0 +1,5 @@
+
+PROJECT_NAME=ListaryPro
+ListaryPro_VERSION_MAJOR=6
+ListaryPro_VERSION_MINOR=2
+ListaryPro_VERSION_PATCH=0
