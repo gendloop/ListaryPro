@@ -1,0 +1,54 @@
+name: Init
+
+permissions:
+  contents: write
+  actions: write
+
+on: 
+  push:
+    branches:
+      - main
+    
+jobs:
+  init:
+    if: github.repository != 'gendloop/template-gendloopAppR'
+    runs-on: ubuntu-latest
+    steps:
+      - name: get-repo-name
+        id: get-repo-name
+        run: |
+          repo_name=${GITHUB_REPOSITORY#*/}
+          echo "reponame=$repo_name" >> "$GITHUB_OUTPUT"
+        
+      - name: replace-README
+        uses: gendloop/replace-str@main
+        with: 
+          token: ${{ github.token }}
+          path-to-replace: README.md
+          replace-to-path: README.md
+          str-to-replace: "RepoName"
+          replace-to-str: ${{ steps.get-repo-name.outputs.reponame }}
+
+      - name: replace-App
+        uses: gendloop/replace-str@main
+        with: 
+          token: ${{ github.token }}
+          path-to-replace: App.json
+          replace-to-path: ${{ steps.get-repo-name.outputs.reponame }}.json
+          str-to-replace: "RepoName"
+          replace-to-str: ${{ steps.get-repo-name.outputs.reponame }}
+
+      - name: remove
+        working-directory: ${{ github.workspace }}
+        shell: pwsh
+        run: |
+          Remove-Item App.json
+          Remove-Item .github/workflows/Init.yml
+
+      - name: git-push
+        uses: gendloop/git-push@main
+        with:
+          token: ${{ github.token }}
+          commit: "chore: Remove App.json and Init.yml"
+
+      

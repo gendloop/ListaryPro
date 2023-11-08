@@ -1,0 +1,53 @@
+{
+    "datas":[
+        {
+            "files": [
+                "Git/Git_Push.bat",
+                "Git/Git_PushDirectly.bat",
+                "Git/Git_Tag.bat",
+                "Git/Git_Delete_Tag.bat",
+                "Common/7z_release/7z_release.bat",
+                "Common/7z_release/7z_release.ps1"
+            ],
+            "local_dir": ".",
+            "user": "gendloop",
+            "repo": "Tools",
+            "branch": "main",
+            "is_private": true,
+            "token": ""
+        },
+        {
+            "files": [
+                ".github/workflows/Release_Version.yml"
+            ],
+            "local_dir": "../.github/workflows",
+            "user": "gendloop",
+            "repo": "release-version",
+            "branch": "main",
+            "is_private": false,
+            "token": ""
+        },
+        {
+            "files": [
+                ".github/workflows/Sync_Download.yml"
+            ],
+            "local_dir": "../.github/workflows",
+            "user": "gendloop",
+            "repo": "sync-download",
+            "branch": "main",
+            "is_private": false,
+            "token": ""
+        },
+        {
+            "files": [
+                "GitHubActions/FUNDING.yml"
+            ],
+            "local_dir": "../.github",
+            "user": "gendloop",
+            "repo": "Tools",
+            "branch": "main",
+            "is_private": false,
+            "token": ""
+        }
+    ]
+}
