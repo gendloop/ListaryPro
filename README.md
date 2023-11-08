@@ -1,8 +1,8 @@
-# RepoName
+# ListaryPro
 
 ## Install
 
 ```powershell
-scoop install gendloopBucket/RepoName
+scoop install gendloopBucket/ListaryPro
 ```
 
