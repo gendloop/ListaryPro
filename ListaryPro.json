@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0",
+    "description": "Gendloop's app",
+    "homepage": "https://github.com/gendloop/ListaryPro",
+    "license": "LGPL-2.1-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gendloop/ListaryPro/releases/download/v1.0.0/ListaryPro-$version-win64.7z",
+            "hash": ""
+        }
+    },
+    "bin": "ListaryPro.exe",
+    "shortcuts": [
+        [
+            "ListaryPro.exe",
+            "ListaryPro"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gendloop/ListaryPro/releases/download/v$version/ListaryPro-$version-win64.7z"
+            }
+        }
+    }
+}
