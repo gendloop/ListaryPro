@@ -8,8 +8,8 @@ param (
 # 检查 ..\config.txt 文件
 if((Test-Path ..\config.txt) -eq $false) {
     Write-Warning "..\config.txt doesn't exist"
-    return 
-} 
+    return
+}
 
 # 获取项目名称, 版本号
 $content= Get-Content -Raw "..\config.txt"
@@ -29,6 +29,3 @@ echo $version
 
 # package
 7z a $env:userprofile\desktop\${project_name}-$($version[0]).$($version[1]).$($version[2])-win64.7z $folder\* -aoa
-
-
-

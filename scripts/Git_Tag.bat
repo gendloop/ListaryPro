@@ -2,7 +2,7 @@
 @echo off
 cd ..
 git tag -l
-set /P tag=Input your tag: 
+set /P tag=Input your tag:
 git tag %tag%
 git push origin %tag%
 cd scripts
