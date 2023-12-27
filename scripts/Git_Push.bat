@@ -9,4 +9,4 @@ set /P msg=Input your commit:
 git commit -m "%msg%"
 git push
 cd scripts
-choice /C YN /N /T 3 /D Y
+choice /C YN /N /T 3 /D Y >nul
