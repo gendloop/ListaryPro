@@ -7,13 +7,13 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 15 * * 1,3,5'
+    - cron: '30 15 * * 3'
 
 jobs:
   sync_download:
     runs-on: ubuntu-latest
     steps:
       - name: sync-download
-        uses: gendloop/sync-download@v1.0.1
+        uses: gendloop/sync-download@v1.0.2
         with:
           token: ${{ secrets.GENDLOOP_ACCESS_TOKEN }}
