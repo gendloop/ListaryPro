@@ -7,7 +7,7 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 15 * * 3'
+    - cron: '30 15 1,15,28 * *'
 
 jobs:
   sync_download:
