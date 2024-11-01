@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: sync-download
-        uses: gendloop/sync-download@v1.0.2
+        uses: gendloop/sync-download@v1.0.3
         with:
           token: ${{ secrets.GENDLOOP_ACCESS_TOKEN }}
