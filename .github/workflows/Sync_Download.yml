@@ -11,6 +11,7 @@ on:
 
 jobs:
   sync_download:
+    if: ${{ github.actor == 'gendloop' || github.actor == 'XiGeoAlgorithm' }}
     runs-on: ubuntu-latest
     steps:
       - name: sync-download
