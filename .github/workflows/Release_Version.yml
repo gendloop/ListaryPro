@@ -1,18 +1,3 @@
-# # Required
-#   version:
-#     description: 'New version. e.g. v0.0.0'
-#     required: true
-#     default: 'v0.0.0'
-#   token:
-#     description: 'Personal token'
-#     required: true
-#     default: ${{ github.token }}
-# # Optional
-#   branch:
-#     description: 'branch'
-#     required: false
-#     default: main
-
 name: Release_Version
 
 permissions:
