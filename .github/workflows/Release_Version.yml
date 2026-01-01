@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: release-version
-        uses: gendloop/release-version@v1.0.3
+        uses: gendloop/release-version@main
         with:
           version: ${{ github.ref_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
